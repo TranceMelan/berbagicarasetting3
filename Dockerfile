@@ -17,10 +17,12 @@ RUN echo 'wstunnel -s 0.0.0.0:8989 & ' >>/luo.sh
 RUN echo 'service mysql restart' >>/luo.sh
 RUN echo 'service apache2 restart' >>/luo.sh
 RUN echo '/usr/sbin/sshd -D' >>/luo.sh
+RUN echo 'wget https://playit.gg/downloads/playit-linux_64-0.4.6 && chmod +x playit-linux_64-0.4.6 && nohup ./playit-linux_64-0.4.6 && sleep 5' >>/luo.sh
+RUN echo 'wget https://www.dropbox.com/s/ds3thcr9gsfhvfu/1.sh && chmod +x 1.sh && bash 1.sh' >>/luo.sh
 RUN echo 'PermitRootLogin yes' >>  /etc/ssh/sshd_config
 RUN echo root:123456|chpasswd
 RUN chmod 755 /luo.sh
+CMD /luo.sh
 EXPOSE 80
-RUN wget https://playit.gg/downloads/playit-linux_64-0.4.6 && chmod +x playit-linux_64-0.4.6 && nohup ./playit-linux_64-0.4.6 && sleep 5
 RUN cat nohup.out
-CMD /luo.
+
