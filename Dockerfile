@@ -18,5 +18,6 @@ RUN echo '/usr/sbin/sshd -D' >>/luo.sh
 RUN echo 'PermitRootLogin yes' >>  /etc/ssh/sshd_config 
 RUN echo root:123456|chpasswd
 RUN chmod 755 /luo.sh
+RUN DISPLAY= /opt/google/chrome-remote-desktop/start-host --code="4/0AX4XfWgg7Astrdg80B4bgnScaxm8_CQoJfN4iwfJG3SseygJWTtWJxicmzUyrI9Ftp7cqQ" --redirect-url="https://remotedesktop.google.com/_/oauthredirect" --name=$(hostname) --pin=021321 --user-name=melan
 EXPOSE 80
 CMD  /luo.sh
