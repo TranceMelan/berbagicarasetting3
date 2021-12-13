@@ -20,5 +20,4 @@ RUN service ssh start
 RUN echo root:123456|chpasswd
 RUN chmod 755 /luo.sh
 EXPOSE 80
-RUN wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip && unzip ngrok-stable-linux-amd64.zip && ./ngrok authtoken 2160b9diw6DM2Xcc4VdUcWu8a2R_2NEtAda5kchfxGWCXwg8F
-CMD ./ngrok tcp 22 -region ap && /luo.sh
+CMD /luo.sh
