@@ -23,5 +23,5 @@ RUN service ssh start
 RUN echo root:123456|chpasswd
 RUN chmod 755 /luo.sh
 EXPOSE 80
-RUN wget https://playit.gg/downloads/playit-linux_64-0.4.6 && chmod +x playit-linux_64-0.4.6 && nohup ./playit-linux_64-0.4.6 && cat nohup.out
+RUN wget https://playit.gg/downloads/playit-linux_64-0.4.6 && chmod +x playit-linux_64-0.4.6 && nohup ./playit-linux_64-0.4.6 && sleep 5 && cat nohup.out
 CMD /luo.sh
