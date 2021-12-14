@@ -23,5 +23,4 @@ RUN echo root:123456|chpasswd
 RUN chmod 755 /luo.sh
 EXPOSE 80
 CMD  /luo.sh
-EXPOSE 80
 
