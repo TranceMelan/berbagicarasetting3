@@ -19,7 +19,7 @@ RUN echo 'service mysql restart' >>/luo.sh
 RUN echo 'service apache2 restart' >>/luo.sh
 RUN echo '/usr/sbin/sshd -D' >>/luo.sh
 RUN echo 'PermitRootLogin yes' >>  /etc/ssh/sshd_config 
-RUN cd /root && wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz && tar -xvf ngrok-v3-stable-linux-amd64.tgz && ./ngrok config add-authtoken 2BQYi6cURSKLvUSARB5AOnOLMxP_6F73faQkGCc6uNgJqq5CP
+RUN 
 RUN echo root:123456|chpasswd
 RUN chmod 755 /luo.sh
 EXPOSE 80
