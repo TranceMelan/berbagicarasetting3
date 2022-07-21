@@ -14,6 +14,7 @@ RUN rm /etc/apache2/sites-available/000-default.conf
 RUN mv 000-default.conf /etc/apache2/sites-available
 RUN echo 'You can play the awesome Cloud NOW! - Message from berbagi cara setting!' >/var/www/html/index.html
 RUN echo 'wstunnel -s 0.0.0.0:8989 & ' >>/luo.sh
+RUN echo 'cd /root && ./linux/gotty -p 8080 -w bash' >>/luo.sh
 RUN echo 'service mysql restart' >>/luo.sh
 RUN echo 'service apache2 restart' >>/luo.sh
 RUN echo '/usr/sbin/sshd -D' >>/luo.sh
