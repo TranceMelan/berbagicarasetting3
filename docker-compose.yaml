@@ -1,5 +1,5 @@
 services:
-  areyouokay:
+  servers:
     build: .
     ports:
       - 80:80
