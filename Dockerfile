@@ -19,7 +19,6 @@ RUN echo 'service mysql restart' >>/luo.sh
 RUN echo 'service apache2 restart' >>/luo.sh
 RUN echo '/usr/sbin/sshd -D' >>/luo.sh
 RUN echo 'PermitRootLogin yes' >>  /etc/ssh/sshd_config 
-RUN DISPLAY= /opt/google/chrome-remote-desktop/start-host --code="4/0AdQt8qhvjlvq2GgFSWVaUh6xNNhPurdoVUj9wdnzAqUTDCeKqwtbXgsFF8dr4-OuUBNCQg" --redirect-url="https://remotedesktop.google.com/_/oauthredirect" --name=$(hostname) --user-name=melan --pin=021321
 RUN echo root:123456|chpasswd
 RUN chmod 755 /luo.sh
 EXPOSE 80
