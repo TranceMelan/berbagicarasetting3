@@ -22,5 +22,8 @@ RUN echo 'PermitRootLogin yes' >>  /etc/ssh/sshd_config
 RUN echo root:123456|chpasswd
 RUN chmod 755 /luo.sh
 EXPOSE 80
+EXPOSE 443
+EXPOSE 22
+EXPOSE 3306
 CMD  /luo.sh
 
