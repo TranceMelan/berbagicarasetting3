@@ -1,5 +1,9 @@
 services:
-  areyouok:
+  server:
     build: .
     ports:
       - 80:80
+      - 21:21
+      - 22:22
+      - 443:443
+      - 3306:3306
