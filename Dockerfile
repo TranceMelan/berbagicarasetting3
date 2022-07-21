@@ -1,4 +1,4 @@
-FROM dokken/ubuntu-20.04
+FROM melantrance/full-ubuntu:jupyter
 VOLUME [ "/var/run/docker.sock:/var/run/docker.sock" ]
 
 RUN apt-get update
